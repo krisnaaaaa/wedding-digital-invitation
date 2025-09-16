@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\resources",
+    "\\resources\\js",
+    "\\resources\\js\\sections",
+    "\\resources\\js\\views",
+    "\\resources\\js\\views\\components",
+    "\\resources\\views",
+    "\\routes",
+    "\\tests"
+  ],
+  "SelectedNode": "\\resources\\js\\views\\components\\Gallery.vue",
+  "PreviewInSolutionExplorer": false
+}

@@ -111,24 +111,46 @@
             <div class="tw-h-16"></div>
 
             <div id="guest_comment" class="uk-container uk-container-small">
+                <!-- Loading indicator for initial load -->
+                <div v-if="loading && comments.length === 0" class="uk-text-center uk-margin">
+                    <div uk-spinner></div>
+                    <p class="uk-text-muted">Memuat komentar...</p>
+                </div>
+
+                <!-- Comments list -->
                 <Comment
                     data-aos="slide-up"
                     data-aos-offset="100"
                     data-aos-easing="ease-out-back"
                     v-for="(comment, index) in comments"
                     v-bind:comment="comment"
-                    v-bind:key="index"
+                    v-bind:key="comment.id || index"
                 ></Comment>
 
+                <!-- Infinite loading component -->
                 <infinite-loading
                     spinner="spiral"
                     @distance="1"
-                    @disabled="busy"
+                    @disabled="busy || !hasMore"
                     @infinite="loadMore"
                 >
-                    <div slot="no-more"></div>
-                    <div slot="no-results">No results message</div>
+                    <div slot="no-more">
+                        <div class="uk-text-center uk-margin">
+                            <p class="uk-text-muted">Semua komentar telah dimuat</p>
+                        </div>
+                    </div>
+                    <div slot="no-results">
+                        <div class="uk-text-center uk-margin">
+                            <p class="uk-text-muted">Belum ada komentar</p>
+                        </div>
+                    </div>
                 </infinite-loading>
+
+                <!-- Loading more indicator -->
+                <div v-if="loading && comments.length > 0" class="uk-text-center uk-margin">
+                    <div uk-spinner></div>
+                    <p class="uk-text-muted">Memuat komentar lainnya...</p>
+                </div>
             </div>
         </section>
 
@@ -187,15 +209,19 @@ export default {
             comments: [],
             page: 1,
             busy: false,
+            loading: false,
+            hasMore: true,
+            total: 0,
         };
     },
 
     mounted() {
+        // Load initial data
+        this.loadInitialData();
 
-         let prevScrollpos = window.pageYOffset;
+        let prevScrollpos = window.pageYOffset;
 
-         window.onscroll = () => {
-             
+        window.onscroll = () => {
             const currentScrollPos = window.pageYOffset;
 
             if (prevScrollpos > currentScrollPos) {
@@ -204,35 +230,62 @@ export default {
                 document.getElementById("navbar").style.bottom = "-78px";
             }
             prevScrollpos = currentScrollPos;
-
-            let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
-
-            if (bottomOfWindow) {
-                this.loadMore();
-            }
         }
     },
 
     methods: {
-        loadMore($state) {
-            this.busy = true;
+        async loadInitialData() {
+            this.loading = true;
+            try {
+                const response = await axios.get(`comments?page=${this.page}&per_page=3`);
+                const data = response.data;
 
-            axios
-                .get("comments?page=" + this.page)
-                .then(({ data }) => {
-                    const listComments =  data.data;
-                    if (listComments.length) {
-                        this.page += 1;
-                        this.comments.push(...listComments);
-                        $state.loaded();
-                    } else {
-                        $state.complete();
-                    }
-                })
-                .catch((err) => console.log(err));
+                this.comments = data.data;
+                this.page = data.current_page + 1;
+                this.hasMore = data.has_more;
+                this.total = data.total;
+            } catch (error) {
+                console.error('Error loading initial data:', error);
+            } finally {
+                this.loading = false;
+            }
         },
+
+        async loadMore($state) {
+            if (this.busy || !this.hasMore) {
+                if ($state) $state.complete();
+                return;
+            }
+
+            this.busy = true;
+            this.loading = true;
+
+            try {
+                const response = await axios.get(`comments?page=${this.page}&per_page=3`);
+                const data = response.data;
+
+                if (data.data && data.data.length > 0) {
+                    this.comments.push(...data.data);
+                    this.page = data.current_page + 1;
+                    this.hasMore = data.has_more;
+
+                    if ($state) $state.loaded();
+                } else {
+                    this.hasMore = false;
+                    if ($state) $state.complete();
+                }
+            } catch (error) {
+                console.error('Error loading more comments:', error);
+                if ($state) $state.complete();
+            } finally {
+                this.busy = false;
+                this.loading = false;
+            }
+        },
+
         addComment(comment) {
             this.comments.unshift(comment);
+            this.total += 1;
         },
     },
 };

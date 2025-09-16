@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    .card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #ff4081;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday! 🎂</h1>
+    <p>Wishing you a day filled with love, joy, and lots of cake!</p>
+    <img src="https://cdn.pixabay.com/photo/2017/08/30/07/52/birthday-2695877_1280.jpg" alt="Birthday Cake">
+  </div>
+</body>
+</html>

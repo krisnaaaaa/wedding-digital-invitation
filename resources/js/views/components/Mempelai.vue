@@ -20,18 +20,18 @@
                     <div class="tw-grid tw-grid-cols-1 sm:tw-grid-cols-2 sm:tw-gap-4 md:tw-gap-2 lg:tw-gap-6 tw-mx-auto">
                         <div class="tw-text-center">
                             <div class="pl tw-mx-auto"></div>
-                            <h2 class="tw-py-3 m-name tw-text-1xl sm:tw-text-lg md:tw-text-1xl lg:tw-text-2xl">Falah Fadlillah, S.Ds.</h2>
-                            <!-- <a href="" class="">@salmanagustian</a>  -->
+                            <h2 class="tw-py-3 m-name tw-text-1xl sm:tw-text-lg md:tw-text-1xl lg:tw-text-2xl">Bayu Anggara S.Kom.</h2>
+                            <!-- <a href="" class="">@bayuanggara</a>  -->
                             <p class="tw-text-sm lg:tw-font-semibold tw-font-normal tw-mb-10">
-                                Putra dari Bpk Candra Utama, S.H. <br>& Ibu Dra. Letfi Latifah
+                                Putra dari Bpk Bambang <br>& Ibu Puji
                             </p>
                         </div>
                         <div class="tw-text-center">
                             <div class="pw tw-mx-auto"></div>
-                            <h2 class="tw-py-3 m-name tw-text-1xl sm:tw-text-lg md:tw-text-1xl lg:tw-text-2xl">Lita Luthfiyyani, S.H.</h2>
-                            <!-- <a href="" class="">@zakhansa</a> -->
+                            <h2 class="tw-py-3 m-name tw-text-1xl sm:tw-text-lg md:tw-text-1xl lg:tw-text-2xl">Annisa</h2>
+                            <!-- <a href="" class="">@annisa</a> -->
                             <p class="tw-text-sm lg:tw-font-semibold tw-font-normal tw-mb-12 sm:tw-mb-20">
-                                Putri dari Bpk Adjat Sudradjat, S.Hut. <br>& Ibu Iin Irnayati
+                                Putri dari - <br>& Ibu -
                             </p>
                         </div>
                     </div>
@@ -62,15 +62,15 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    mask-image: url('/mywedding/public/assets/images/mask.png');
-    -webkit-mask-image:  url('/mywedding/public/assets/images/mask.png');
+    mask-image: url('/wedding-digital-invitation1/public/assets/images/mask.png');
+    -webkit-mask-image:  url('/wedding-digital-invitation1/public/assets/images/mask.png');
     mask-size: 200px;
     -webkit-mask-size: 200px;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    background-image: url('/mywedding/public/assets/images/cpp-test.jpg');
+    background-image: url('/wedding-digital-invitation1/public/assets/images/bayu.jpg');
 }
 
 .pw {
@@ -80,15 +80,15 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    mask-image: url('/mywedding/public/assets/images/mask.png');
-    -webkit-mask-image:  url('/mywedding/public/assets/images/mask.png');
+    mask-image: url('/wedding-digital-invitation1/public/assets/images/mask.png');
+    -webkit-mask-image:  url('/wedding-digital-invitation1/public/assets/images/mask.png');
     mask-size: 200px;
     -webkit-mask-size: 200px;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    background-image: url('/mywedding/public/assets/images/cpw-test.jpg');
+    background-image: url('/wedding-digital-invitation1/public/assets/images/a-test.jpg');
 }
 
 .divider {

@@ -27,20 +27,20 @@
                     </div>
                     <div class="uk-grid-margin">
                         <a class="uk-inline yn-anim uk-scrollspy-inview "
-                            href="assets/images/gallery/6.jpg" style="">
-                            <img class="thumb-gallery" src="assets/images/gallery/6.jpg" alt="Our Prawedding Photo">
-                        </a>
-                    </div>
-                    <div class="uk-grid-margin uk-first-column">
-                        <a class="uk-inline yn-anim uk-scrollspy-inview "
                             href="assets/images/gallery/4.jpg" style="">
                             <img class="thumb-gallery" src="assets/images/gallery/4.jpg" alt="Our Prawedding Photo">
                         </a>
                     </div>
-                    <div class="uk-grid-margin">
+                    <div class="uk-grid-margin uk-first-column">
                         <a class="uk-inline yn-anim uk-scrollspy-inview "
                             href="assets/images/gallery/5.jpg" style="">
                             <img class="thumb-gallery" src="assets/images/gallery/5.jpg" alt="Our Prawedding Photo">
+                        </a>
+                    </div>
+                    <div class="uk-grid-margin">
+                        <a class="uk-inline yn-anim uk-scrollspy-inview "
+                            href="assets/images/gallery/6.jpg" style="">
+                            <img class="thumb-gallery" src="assets/images/gallery/6.jpg" alt="Our Prawedding Photo">
                         </a>
                     </div>
                     <div class="uk-grid-margin uk-first-column">

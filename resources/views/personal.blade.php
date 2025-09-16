@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="title" content="Khansa & Salman">
-    <meta name="description" content="Landing page wedding personal Khansa & Salman">
-    <meta name="keywords" content="khansa & salman, wedding, wedding invitation, villa lagenta">
-    <meta name="author" content="Salman">
+    <meta name="title" content="Bayu & Anissa">
+    <meta name="description" content="Landing page wedding personal Bayu & Annisa">
+    <meta name="keywords" content="Bayu & Annisa, wedding, wedding invitation, Rumah">
+    <meta name="author" content="Bayu">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5">
     <meta name="format-detection" content="telephone=no">
-    <title>Khansa & Salman</title>
+    <title>Bayu & Annisa</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -50,7 +50,7 @@
             ">
 
                 <div class="@if(request()->has('name')) tw-mt-20 @else tw-mt-24 @endif tw-text-center">
-                    <p class="uk-text-medium uk-margin-remove-bottom txt-simple">HALLO ✌</p>
+                    <p class="uk-text-medium uk-margin-remove-bottom txt-simple">HALLO </p>
                     
                     @if (request()->has('name'))
                         <div class="tw-mb-5 tw-mt-0.5 tw-text-base tw-w-semibold tw-text-center">
@@ -62,7 +62,7 @@
 
                     <p class="uk-text-medium txt-simple">YOU'RE INVITED TO OUR WEDDING</p>
                     <h2 class="yn-color tw-mt-4" style="line-height:1; margin-bottom:9px !important; font-size:28px;">
-                        Khansa &amp; Salman	</h2>
+                        Bayu &amp; Annisa	</h2>
                 </div>
 
                 <div class="tw-mt-20">

@@ -2,19 +2,38 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Guest;
+use App\Services\JsonGuestService;
 use Illuminate\Http\Request;
 
 class GuestBookController extends Controller
 {
-    public function list()
+    protected $guestService;
+
+    public function __construct(JsonGuestService $guestService)
     {
-        return Guest::latest()->paginate(3);
+        $this->guestService = $guestService;
+    }
+
+    public function list(Request $request)
+    {
+        $perPage = $request->get('per_page', 3);
+        $page = $request->get('page', 1);
+
+        $pagination = $this->guestService->paginate($perPage, $page);
+
+        return response()->json([
+            'data' => $pagination->items(),
+            'current_page' => $pagination->currentPage(),
+            'last_page' => $pagination->lastPage(),
+            'per_page' => $pagination->perPage(),
+            'total' => $pagination->total(),
+            'has_more' => $pagination->hasMorePages()
+        ]);
     }
 
     public function store(Request $request)
     {
-        $newGuest = Guest::create($request->only(['name', 'presence', 'person', 'comment']));
+        $newGuest = $this->guestService->store($request->only(['name', 'presence', 'person', 'comment']));
 
         return $newGuest;
     }

@@ -3,3 +3,6 @@
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
+public/assets/images/gallery/vid.mp4 filter=lfs diff=lfs merge=lfs -text
+public/assets/music/*.mp3 filter=lfs diff=lfs merge=lfs -text
+public/assets/music/*.wav filter=lfs diff=lfs merge=lfs -text

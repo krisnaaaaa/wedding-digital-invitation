@@ -22,14 +22,6 @@
                     </select>
                 </div>
 
-                <div :class="{ 'tw-hidden' : isHidden }">
-                    <div class="uk-form-label">Jumlah Tamu:</div>
-                    <select v-model="guest.person" class="guestbook-form">
-                        <option value="1">1 Orang</option>
-                        <option value="2">2 Orang</option>
-                    </select>
-                </div>
-
                 <div class="uk-margin" style="margin-bottom: 0px">
                     <div class="uk-form-label">Isi Ucapan :</div>
                     <textarea v-model="guest.comment" class="guestbook-form" rows="5"

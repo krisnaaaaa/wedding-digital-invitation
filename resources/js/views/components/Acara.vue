@@ -4,7 +4,7 @@
             <div class="uk-container uk-container-small">
                 <h2 class="tw-text-3xl tw-mt-3 sm:tw-text-4xl md:tw-text-5xl yn-color tw-text-center uk-scrollspy-inview">
                     Save The Date </h2>
-                <p class="tw-text-center tw-mt-2 tw-mb-8 tw-text-md">Minggu, 07 November 2021</p>
+                <p class="tw-text-center tw-mt-2 tw-mb-8 tw-text-md">Jumat, 10 Oktober 2025</p>
 
                 <div class="uk-grid-small uk-flex-center uk-child-width-auto yn-color2 yn-anim uk-grid uk-countdown uk-scrollspy-inview"
                     uk-grid uk-countdown="date: 2021-11-07T11:00:00+07:00">
@@ -70,9 +70,9 @@
                                 <img class="tw-mx-auto" src="assets/images/pemisah.png" alt="divider">
                             </div>
 
-                            <p class="tw-text-1xl tw-text-center md:tw-text-2xl"> Villa Lagenta </p>
+                            <p class="tw-text-1xl tw-text-center md:tw-text-2xl"> Rumah </p>
                             <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;">
-                                Jl. Kol. Masturi No. 8, Lembang, Jawa Barat 40391 </p>
+                                Jl. Candi Telaga Wangi No.50-44, Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur </p>
 
                             <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;">
                             </p>

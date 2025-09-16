@@ -1,0 +1,173 @@
+[
+    {
+        "id": "68c990d6317fd",
+        "name": "ssad",
+        "presence": "0",
+        "person": "1",
+        "comment": "sadads",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:31:18.203329Z"
+    },
+    {
+        "id": "68c99088a2172",
+        "name": "sss",
+        "presence": "0",
+        "person": "1",
+        "comment": "ss",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:30:00.664381Z"
+    },
+    {
+        "id": "68c990808008e",
+        "name": "ssss",
+        "presence": "1",
+        "person": "1",
+        "comment": "ss",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:29:52.525042Z"
+    },
+    {
+        "id": "68c99009308e5",
+        "name": "asdsadsdasads",
+        "presence": "1",
+        "person": "1",
+        "comment": "adsadsadsdasadsadsdasda",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:27:53.199222Z"
+    },
+    {
+        "id": "68c98fe42ca52",
+        "name": "asdsdaasdsad",
+        "presence": "1",
+        "person": "1",
+        "comment": "asddsasda",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:27:16.183572Z"
+    },
+    {
+        "id": "68c98a2649efc",
+        "name": "dasasdsad",
+        "presence": "1",
+        "person": "1",
+        "comment": "sadasdsadas",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-16T16:02:46.313993Z"
+    },
+    {
+        "id": "68c70561188ef",
+        "name": "998989",
+        "presence": "1",
+        "person": "1",
+        "comment": "kkmlmlmkklkl",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:11:45.101012Z"
+    },
+    {
+        "id": "68c70552a5bd1",
+        "name": "llmlmll",
+        "presence": "0",
+        "person": "1",
+        "comment": "kokjmkkkk",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:11:30.679816Z"
+    },
+    {
+        "id": "68c7045a618d1",
+        "name": "fsgfsff",
+        "presence": "0",
+        "person": "1",
+        "comment": "dgdgdgd",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:07:22.399870Z"
+    },
+    {
+        "id": "68c7043868ba6",
+        "name": "waddddss",
+        "presence": "0",
+        "person": "1",
+        "comment": "awddawddwaw",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:06:48.429269Z"
+    },
+    {
+        "id": "68c7042f33fe4",
+        "name": "tess",
+        "presence": "0",
+        "person": "1",
+        "comment": "asaaaaa",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:06:39.213356Z"
+    },
+    {
+        "id": "68c7040b8e834",
+        "name": "asddsaasdsasad",
+        "presence": "1",
+        "person": "1",
+        "comment": "dsaasddsa",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:06:03.584059Z"
+    },
+    {
+        "id": "68c704045c1d4",
+        "name": "saddas",
+        "presence": "1",
+        "person": "1",
+        "comment": "asddsa",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T18:05:56.388043Z"
+    },
+    {
+        "id": "68c6f4ed3e109",
+        "name": "test",
+        "presence": "1",
+        "person": "1",
+        "comment": "test",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T17:01:33.254654Z"
+    },
+    {
+        "id": "68c6f415ef42a",
+        "name": "asd",
+        "presence": 1,
+        "person": 1,
+        "comment": "asd",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T16:57:57.982009Z"
+    },
+    {
+        "id": "68c6f415b27c4",
+        "name": "bariq",
+        "presence": 1,
+        "person": 1,
+        "comment": null,
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T16:57:57.731945Z"
+    },
+    {
+        "id": "68c6f3c9e3c23",
+        "name": "bariq",
+        "presence": 1,
+        "person": 1,
+        "comment": null,
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T16:56:41.934009Z"
+    },
+    {
+        "id": "68c6f3c9a493c",
+        "name": "ha",
+        "presence": 1,
+        "person": 1,
+        "comment": "ga",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T16:56:41.675107Z"
+    },
+    {
+        "id": "68c6f37e8cd08",
+        "name": "bariq",
+        "presence": 1,
+        "person": 1,
+        "comment": "test",
+        "created_at": "1 detik yang lalu",
+        "timestamp": "2025-09-14T16:55:26.579067Z"
+    }
+]
