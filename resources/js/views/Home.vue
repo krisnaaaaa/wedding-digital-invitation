@@ -312,9 +312,6 @@ export default {
                     pos: 'top-right',
                     timeout: 2000
                 });
-                
-                // Also show a simple alert as requested
-                alert('Account number copied to clipboard!');
             }).catch(err => {
                 console.error('Failed to copy: ', err);
                 UIkit.notification({
@@ -323,9 +320,6 @@ export default {
                     pos: 'top-right',
                     timeout: 2000
                 });
-                
-                // Alert for failure as well
-                alert('Failed to copy account number');
             });
         },
     },

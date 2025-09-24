@@ -45,7 +45,7 @@ class JsonGuestService
             'person' => $data['person'],
             'comment' => $data['comment'] ?? null,
             'created_at' => $timestamp->toDateTimeString(),
-            'timestamp' => $timestamp->toDateTimeString()
+            'timestamp' => $timestamp->toDateTimeString12()
         ];
 
         // Tambahkan di awal array (latest first)
