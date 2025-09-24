@@ -60,13 +60,13 @@
                                     <p class="tw-text-brown-lighter tw-font-normal tw-text-1xl sm:tw-text-2xl lg:tw-text-3xl"
                                         style="font-family: Greenlight Script;">Akad</p>
                                     <p class="tw-text-center tw-mt-2 md:tw-mt-4 tw-text-md sm:tw-text-base md:tw-text-base"
-                                        style="font-size: 14px;">Pukul 08.00 - 09.00 WIB</p>
+                                        style="font-size: 14px;">Pukul 09.00 - 10.00 WIB</p>
                                 </div>
                                 <div uk-scrollspy="cls: uk-animation-slide-right; delay: 700">
                                     <p class="tw-text-brown-lighter tw-font-normal tw-text-1xl sm:tw-text-2xl lg:tw-text-3xl"
                                         style="font-family: Greenlight Script;">Resepsi</p>
                                     <p class="tw-text-center tw-mt-2 md:tw-mt-4 tw-text-md sm:tw-text-base md:tw-text-base"
-                                        style="font-size: 14px;">Pukul 10.45 - 14.00 WIB</p>
+                                        style="font-size: 14px;">Pukul 14.00 - 20.00 WIB</p>
                                 </div>
                             </div>
 
