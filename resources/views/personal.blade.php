@@ -66,13 +66,20 @@
                 </div>
 
                 <div class="tw-mt-20">
-                    <button id="play-sound" class="uk-modal-close tw-bg-white tw-text-gray-600 tw-text-xs tw-tracking-widest tw-py-2 tw-px-4 tw-rounded-lg tw-w-3/5" type="button">OPEN INVITATION</button>
+                    <button id="play-sound" class="uk-modal-close tw-bg-white tw-text-gray-600 tw-text-xs tw-tracking-widest tw-py-2 tw-px-4 tw-rounded-lg tw-w-3/5" type="button" onclick="dispatchInvitationEvent()">OPEN INVITATION</button>
                 </div>
                 
             </div>
         </div>
     </div>   
 </body>
+
+<script>
+    function dispatchInvitationEvent() {
+        // Dispatch a custom event to notify that the invitation has been opened
+        window.dispatchEvent(new Event('invitation-opened'));
+    }
+</script>
 
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

@@ -4,13 +4,13 @@
             style="background-image: url('assets/images/gallery/cover6.jpg')">
             <div class="outer-cover tw-px-2.5 tw-pt-5 tw-pb-16">
                 <div class="tw-p-4">
-                    <p class="tw-font-light tw-text-sm lg:tw-text-md lg:tw-font-normal tw-text-center uk-scrollspy-inview"
+                    <p class="tw-font-light tw-text-sm lg:tw-text-md lg:tw-font-normal tw-text-center uk-scrollspy-inview animate-slide-up"
                         style="letter-spacing: 3px; color:#ffffffb3;">WEDDING INVITATION</p>
                     <div class="tw-h-64"></div>
                     <div class="tw-py-4">
-                        <h2 class="tw-text-4xl lg:tw-text-5xl tw-text-center tw-font-light uk-scrollspy-inview">Bayu & Annisa</h2>
+                        <h2 class="tw-text-4xl lg:tw-text-5xl tw-text-center tw-font-light uk-scrollspy-inview animate-slide-down">Bayu & Annisa</h2>
                     </div>
-                    <p class="tw-text-center tw-font-light tw-text-xs lg:tw-text-lg lg:tw-font-normal uk-scrollspy-inview"
+                    <p class="tw-text-center tw-font-light tw-text-xs lg:tw-text-lg lg:tw-font-normal uk-scrollspy-inview animate-slide-up"
                         style="color: #bdaa8b; letter-spacing: 3px;">10.10.2025</p>
                 </div>
             </div>
@@ -24,6 +24,39 @@
     }
 </script>
 
-<style>
+<style scoped>
+/* Animation styles */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-down {
+    animation: slideDown 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
 </style>

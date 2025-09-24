@@ -19,7 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        // Add your frontend URL here. Examples:
+        // 'http://localhost:8080',
+        // 'https://your-frontend-domain.com',
+    ],
 
     'allowed_origins_patterns' => [],
 

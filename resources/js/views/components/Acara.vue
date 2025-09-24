@@ -2,12 +2,14 @@
     <div>
         <section id="acara">
             <div class="uk-container uk-container-small">
-                <h2 class="tw-text-3xl tw-mt-3 sm:tw-text-4xl md:tw-text-5xl yn-color tw-text-center uk-scrollspy-inview">
+                <h2 class="tw-text-3xl tw-mt-3 sm:tw-text-4xl md:tw-text-5xl yn-color tw-text-center"
+                    uk-scrollspy="cls: uk-animation-slide-top; delay: 300">
                     Save The Date </h2>
-                <p class="tw-text-center tw-mt-2 tw-mb-8 tw-text-md">Jumat, 10 Oktober 2025</p>
+                <p class="tw-text-center tw-mt-2 tw-mb-8 tw-text-md"
+                    uk-scrollspy="cls: uk-animation-slide-bottom; delay: 500">Jumat, 10 Oktober 2025</p>
 
-                <div class="uk-grid-small uk-flex-center uk-child-width-auto yn-color2 yn-anim uk-grid uk-countdown uk-scrollspy-inview"
-                    uk-grid uk-countdown="date: 2021-11-07T11:00:00+07:00">
+                <div class="uk-grid-small uk-flex-center uk-child-width-auto yn-color2 uk-grid uk-countdown"
+                    uk-grid uk-countdown="date: 2025-10-10T11:00:00+07:00">
                     <div>
                         <div class="sm:tw-text-4xl md:tw-text-5xl tw-font-semibold uk-countdown-number uk-countdown-days">
                         </div>
@@ -48,17 +50,19 @@
                         <div class="uk-first-column">
 
                             <div class="tw-py-12 tw-mb-1">
-                                <img class="tw-mx-auto" src="assets/images/pemisah.png" alt="divider">
+                                <img class="tw-mx-auto" 
+                                    uk-scrollspy="cls: uk-animation-fade; delay: 100"
+                                    src="assets/images/pemisah.png" alt="divider">
                             </div>
 
                             <div class="tw-grid tw-grid-cols-1 tw-gap-10">
-                                <div>
+                                <div uk-scrollspy="cls: uk-animation-slide-left; delay: 700">
                                     <p class="tw-text-brown-lighter tw-font-normal tw-text-1xl sm:tw-text-2xl lg:tw-text-3xl"
                                         style="font-family: Greenlight Script;">Akad</p>
                                     <p class="tw-text-center tw-mt-2 md:tw-mt-4 tw-text-md sm:tw-text-base md:tw-text-base"
                                         style="font-size: 14px;">Pukul 08.00 - 09.00 WIB</p>
                                 </div>
-                                <div>
+                                <div uk-scrollspy="cls: uk-animation-slide-right; delay: 700">
                                     <p class="tw-text-brown-lighter tw-font-normal tw-text-1xl sm:tw-text-2xl lg:tw-text-3xl"
                                         style="font-family: Greenlight Script;">Resepsi</p>
                                     <p class="tw-text-center tw-mt-2 md:tw-mt-4 tw-text-md sm:tw-text-base md:tw-text-base"
@@ -67,18 +71,24 @@
                             </div>
 
                             <div class="tw-py-12 tw-mb-1">
-                                <img class="tw-mx-auto" src="assets/images/pemisah.png" alt="divider">
+                                <img class="tw-mx-auto" 
+                                    uk-scrollspy="cls: uk-animation-fade; delay: 100"
+                                    src="assets/images/pemisah.png" alt="divider">
                             </div>
 
-                            <p class="tw-text-1xl tw-text-center md:tw-text-2xl"> Rumah </p>
-                            <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;">
+                            <p class="tw-text-1xl tw-text-center md:tw-text-2xl"
+                                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 900"> Rumah </p>
+                            <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;"
+                                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 900">
                                 Jl. Candi Telaga Wangi No.50-44, Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur </p>
 
-                            <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;">
+                            <p style="font-size:14px; text-align:center; margin: 8px 0 0px 0;"
+                                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 900">
                             </p>
 
-                            <a href="https://goo.gl/maps/GrcAzNeiZMVEhWzcA"
+                            <a href="https://maps.app.goo.gl/ddEcXJj4sGHNpPgK8"
                                 class="uk-button uk-button-default uk-button-small btn-white"
+                                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1100"
                                 style="margin-top:16px; padding: 4px 16px; border-radius: 20px;">Lihat Lokasi Via Google Map
                                 <span uk-icon="icon: arrow-right" class="uk-icon"><svg width="20" height="20"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -88,10 +98,13 @@
 
 
                             <div class="tw-py-12">
-                                <img class="tw-mx-auto" src="assets/images/pemisah.png" alt="divider">
+                                <img class="tw-mx-auto" 
+                                    uk-scrollspy="cls: uk-animation-fade; delay: 100"
+                                    src="assets/images/pemisah.png" alt="divider">
                             </div>
 
-                            <p class="tw-text-sm tw-leading-relaxed">
+                            <p class="tw-text-sm tw-leading-relaxed"
+                                uk-scrollspy="cls: uk-animation-slide-bottom; delay: 1300">
                                 Ungkapan terima kasih yang tulus dari kami apabila Bapak/Ibu/Teman-teman berkenan hadir dan
                                 memberikan doa restu.
                             </p>
@@ -105,10 +118,10 @@
 
 <script>
     export default {
-
+        
     }
 </script>
 
-<style>
+<style scoped>
 
 </style>

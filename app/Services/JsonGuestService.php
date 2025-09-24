@@ -37,14 +37,15 @@ class JsonGuestService
         $guests = $this->getAllGuests();
         
         // Buat ID unik
+        $timestamp = Carbon::now();
         $newGuest = [
             'id' => uniqid(),
             'name' => $data['name'],
             'presence' => $data['presence'],
             'person' => $data['person'],
             'comment' => $data['comment'] ?? null,
-            'created_at' => Carbon::now()->diffForHumans(),
-            'timestamp' => Carbon::now()->toISOString()
+            'created_at' => $timestamp->toDateTimeString(),
+            'timestamp' => $timestamp->toDateTimeString()
         ];
 
         // Tambahkan di awal array (latest first)

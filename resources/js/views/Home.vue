@@ -80,26 +80,42 @@
                         </p>
                         <ul uk-accordion="" class="uk-accordion">
                             <li class="uk-open">
-                                <a class="uk-accordion-title" href="#">OVO</a>
+                                <a class="uk-accordion-title" href="#">BCA Annisa Yuniar </a>
                                 <div class="uk-accordion-content">
                                     <img
-                                        src="assets/images/gifts/ovo.jpg"
-                                        class="tw-mx-auto tw-h-auto"
-                                        width="400"
-                                        alt="OVO QR CODE"
-                                    />
-                                </div>
-                            </li>
-                            <li class="uk-open">
-                                <a class="uk-accordion-title" href="#">BCA</a>
-                                <div class="uk-accordion-content">
-                                    <img
-                                        src="assets/images/gifts/bca.jpg"
+                                        src="assets/images/gifts/1.png"
                                         class="tw-mx-auto tw-h-auto"
                                         width="400"
                                         alt="BCA QR CODE"
                                     />
                                 </div>
+                                <div class="copy-container">
+                                    <b><p class="account-text">8161537764</p></b>
+                                    <button class="copy-button" @click="copyToClipboard('8161537764')">
+                                        <span uk-icon="icon: copy"></span> Copy
+                                    </button>
+                                </div>
+                               
+                            </li>
+                            <li class="uk-open">
+                                <a class="uk-accordion-title" href="#">BCA Bayu Anggara</a>
+                                <div class="uk-accordion-content">
+                                    <img
+                                        src="assets/images/gifts/1.png"
+                                        class="tw-mx-auto tw-h-auto"
+                                        width="400"
+                                        alt="BCA QR CODE"
+                                        
+                                    />
+                                </div>
+                                <div class="copy-container">
+                                    <p class="account-text">8161250759</p>
+                                    <button class="copy-button" @click="copyToClipboard('8161250759')">
+                                        <span uk-icon="icon: copy"></span> Copy
+                                    </button>
+                                </div>
+                                
+                                
                             </li>
                         </ul>
                     </div>
@@ -185,7 +201,6 @@ import FormGuestBook from "./components/FormGuestBook.vue";
 import Audio from "./addon/Audio.vue";
 import Navbar from "./addon/Navbar.vue";
 import MusicBox from "./addon/MusicBox.vue";
-import Protocol from "./addon/Protocol.vue";
 
 import InfiniteLoading from "vue-infinite-loading";
 
@@ -195,7 +210,6 @@ export default {
         Mempelai,
         Acara,
         Gallery,
-        Protocol,
         FormGuestBook,
         Comment,
         Audio,
@@ -240,7 +254,8 @@ export default {
                 const response = await axios.get(`comments?page=${this.page}&per_page=3`);
                 const data = response.data;
 
-                this.comments = data.data;
+                // Only show the first 3 comments
+                this.comments = data.data.slice(0, 3);
                 this.page = data.current_page + 1;
                 this.hasMore = data.has_more;
                 this.total = data.total;
@@ -287,6 +302,32 @@ export default {
             this.comments.unshift(comment);
             this.total += 1;
         },
+        
+        copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show UIkit notification for success
+                UIkit.notification({
+                    message: 'Account number copied to clipboard!',
+                    status: 'success',
+                    pos: 'top-right',
+                    timeout: 2000
+                });
+                
+                // Also show a simple alert as requested
+                alert('Account number copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                UIkit.notification({
+                    message: 'Failed to copy account number',
+                    status: 'danger',
+                    pos: 'top-right',
+                    timeout: 2000
+                });
+                
+                // Alert for failure as well
+                alert('Failed to copy account number');
+            });
+        },
     },
 };
 </script>
@@ -308,5 +349,43 @@ export default {
         rgba(206, 180, 108, 0.75),
         rgba(255, 255, 255, 0)
     );
+}
+
+.copy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.account-text {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+    font-size: 16px;
+}
+
+.copy-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #45a049;
+}
+
+.copy-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
 }
 </style>

@@ -1,6 +1,11 @@
 <template>
     <div>
-        <div class="tw-bg-white tw-w-full tw-py-5 tw-px-4 tw-h-auto tw-mb-4 tw-rounded-lg">
+        <div 
+            class="tw-bg-white tw-w-full tw-py-5 tw-px-4 tw-h-auto tw-mb-4 tw-rounded-lg"
+            v-bind:class="{ 'animate-fade-in-up': isVisible }"
+            ref="commentElement"
+            :style="{ opacity: isVisible ? 1 : 0 }"
+        >
             <div class="tw-flex tw-space-x-2 sm:tw-space-x-4">
                 <div class="tw-flex-none tw-h-12 tw-w-12 sm:tw-h-14 sm:tw-w-14 md:tw-h-14 md:tw-w-14 tw-rounded-full tw-bg-brown-lighter tw-relative">
                     <span class="tw-font-extrabold tw-text-white tw-text-center tw-text-1xl tw-p-2 tw-mt-0.5 tw-absolute tw-top-0 tw-left-0 tw-right-0">
@@ -40,11 +45,33 @@
     font-weight: 400 !important;
     line-height: 24px;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
 </style>
 
 <script>
 export default {
     props: ['comment'],
+    
+    data() {
+        return {
+            isVisible: false,
+            observer: null
+        }
+    },
 
     filters: {
         presenceFormat(presence) {
@@ -64,7 +91,40 @@ export default {
                 return 'tw-bg-opacity-50 tw-bg-brown-lighter tw-text-brown-dark';
             else
                 return 'tw-bg-opacity-10 tw-bg-gray-500 tw-text-gray-500';
+        },
+        
+        setupIntersectionObserver() {
+            this.observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            this.isVisible = true;
+                            // Stop observing once it's visible
+                            if (this.observer && this.$refs.commentElement) {
+                                this.observer.unobserve(this.$refs.commentElement);
+                            }
+                        }
+                    });
+                },
+                {
+                    threshold: 0.1 // Trigger when 10% of the element is visible
+                }
+            );
+            
+            if (this.$refs.commentElement) {
+                this.observer.observe(this.$refs.commentElement);
+            }
         }
     },
+    
+    mounted() {
+        this.setupIntersectionObserver();
+    },
+    
+    beforeDestroy() {
+        if (this.observer && this.$refs.commentElement) {
+            this.observer.unobserve(this.$refs.commentElement);
+        }
+    }
 }
 </script>
