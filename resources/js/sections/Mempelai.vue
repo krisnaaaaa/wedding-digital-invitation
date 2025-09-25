@@ -62,15 +62,15 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    mask-image: url('/wedding-digital-invitation1/public/assets/images/mask.png');
-    -webkit-mask-image:  url('/wedding-digital-invitation1/public/assets/images/mask.png');
+    mask-image: url('/wedding-digital-invitation/public/assets/images/mask.png');
+    -webkit-mask-image:  url('/wedding-digital-invitation/public/assets/images/mask.png');
     mask-size: 200px;
     -webkit-mask-size: 200px;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    background-image: url('/wedding-digital-invitation1/public/assets/images/bayu.jpg');
+    background-image: url('/wedding-digital-invitation/public/assets/images/bayu.jpg');
 }
 
 .pw {
@@ -80,15 +80,15 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    mask-image: url('/wedding-digital-invitation1/public/assets/images/mask.png');
-    -webkit-mask-image:  url('/wedding-digital-invitation1/public/assets/images/mask.png');
+    mask-image: url('/wedding-digital-invitation/public/assets/images/mask.png');
+    -webkit-mask-image:  url('/wedding-digital-invitation/public/assets/images/mask.png');
     mask-size: 200px;
     -webkit-mask-size: 200px;
     mask-repeat: no-repeat;
     -webkit-mask-repeat: no-repeat;
     mask-position: center;
     -webkit-mask-position: center;
-    background-image: url('/wedding-digital-invitation1/public/assets/images/anisa.jpg');
+    background-image: url('/wedding-digital-invitation/public/assets/images/anisa.jpg');
 }
 
 .divider {
