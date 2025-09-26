@@ -6468,7 +6468,7 @@ var staticRenderFns = [
       _c(
         "audio",
         { attrs: { id: "audio", muted: "", autoplay: "", loop: "" } },
-        [_c("source", { attrs: { src: "assets/music/123.wav" } })]
+        [_c("source", { attrs: { src: "assets/music/123.mp3" } })]
       ),
     ])
   },
